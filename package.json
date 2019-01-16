@@ -4,13 +4,26 @@
   "main": "src/components/index.ts",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 4124",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "package": "ng-packagr -p package.json && cpx \"./deployment-package/bundles/*\" ./deployment",
+    "build-deploy": "ng build --prod --output-path=deployment --base-href /micro-frontend-shared/ && npm run package",
+    "server": "http-server deployment -p 3232 --cors -c-1"
   },
   "private": true,
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/public_api.ts",
+      "flatModuleFile": "bundle"
+    },
+    "dest": "deployment-package",
+    "whitelistedNonPeerDependencies": [
+      "."
+    ]
+  },
   "dependencies": {
     "@angular/animations": "~7.2.0",
     "@angular/common": "~7.2.0",
@@ -44,6 +57,10 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.2.2"
+    "typescript": "~3.2.2",
+    "ng-packagr": "4.5.0",
+    "tsickle": "0.34.0",
+    "http-server": "0.11.1",
+    "cpx": "1.5.0"
   }
 }
