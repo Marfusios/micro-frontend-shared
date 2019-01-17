@@ -21,4 +21,5 @@ const components = [
     ...components,
   ]
 })
-export class EntryModule { }
+export class ComponentsModule { }
+

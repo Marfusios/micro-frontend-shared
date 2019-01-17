@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './mfs-field.component.html',
   styleUrls: ['./mfs-field.component.scss']
 })
-export class MfsFieldComponent { }
+export class MfsFieldComponent {
+  label = '';
+}
