@@ -1,25 +1,35 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MfsLabelComponent } from '../components/mfs-label/mfs-label.component';
-import { MfsInputComponent } from '../components/mfs-input/mfs-input.component';
-import { MfsFieldComponent } from '../components/mfs-field/mfs-field.component';
 
-const components = [
-  MfsLabelComponent,
-  MfsInputComponent,
-  MfsFieldComponent,
+import { AppLabelComponent } from './app-label/app-label.component';
+import { AppInputComponent } from './app-input/app-input.component';
+import { AppFieldComponent } from './app-field/app-field.component';
+import { AppActionsComponent } from './app-actions/app-actions.component';
+import { AlertService } from '../services';
+
+const formComponents = [
+  AppLabelComponent,
+  AppInputComponent,
+  AppFieldComponent,
+  AppActionsComponent,
+];
+
+const services = [
+  AlertService,
 ];
 
 @NgModule({
   declarations: [
-    ...components,
+    ...formComponents,
+  ],
+  providers: [
+    ...services,
   ],
   imports: [
     CommonModule,
   ],
   exports: [
-    ...components,
+    ...formComponents,
   ]
 })
 export class ComponentsModule { }
-

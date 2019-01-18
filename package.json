@@ -14,7 +14,7 @@
     "postinstall": "npm run package"
   },
   "private": true,
-  "dependencies": {
+  "peerDependencies": {
     "@angular/animations": "7.2.0",
     "@angular/common": "7.2.0",
     "@angular/compiler": "7.2.0",
@@ -28,6 +28,9 @@
     "rxjs": "6.3.3",
     "tslib": "1.9.0",
     "zone.js": "0.8.26"
+  },
+  "dependencies": {
+    "tachyons": "4.11.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.12.1",
