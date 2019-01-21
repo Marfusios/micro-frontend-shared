@@ -10,8 +10,7 @@
     "e2e": "ng e2e",
     "package": "ng-packagr -p package.json && cpx \"./deployment-package/bundles/*\" ./deployment",
     "build-deploy": "ng build --prod --output-path=deployment --base-href /micro-frontend-shared/ && npm run package",
-    "server": "http-server deployment -p 3232 --cors -c-1",
-    "postinstall": "npm run package"
+    "server": "http-server deployment -p 3232 --cors -c-1"
   },
   "private": true,
   "peerDependencies": {

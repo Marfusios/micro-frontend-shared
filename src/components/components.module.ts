@@ -7,7 +7,7 @@ import { AppFieldComponent } from './app-field/app-field.component';
 import { AppVersionComponent } from './app-version/app-version.component';
 
 import { AppActionsComponent } from './app-actions/app-actions.component';
-import { AlertService } from '../services';
+import { AlertService, VersionService } from '../services';
 
 const formComponents = [
   AppLabelComponent,
@@ -19,6 +19,7 @@ const formComponents = [
 
 const services = [
   AlertService,
+  VersionService,
 ];
 
 @NgModule({
