@@ -35,7 +35,7 @@ const services = [
   ],
   imports: [
     CommonModule,
-    StoreModule.forFeature('counter', counterReducer)
+    StoreModule.forFeature('counter', counterReducer),
     MatCardModule,
   ],
   exports: [
