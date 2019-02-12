@@ -9,6 +9,7 @@ import { AppVersionComponent } from './app-version/app-version.component';
 import { AppActionsComponent } from './app-actions/app-actions.component';
 import { AlertService, VersionService } from '../services';
 
+import { MatCardModule } from '@angular/material';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from '../store/counter.reducer';
 
@@ -35,6 +36,7 @@ const services = [
   imports: [
     CommonModule,
     StoreModule.forFeature('counter', counterReducer)
+    MatCardModule,
   ],
   exports: [
     ...formComponents,
