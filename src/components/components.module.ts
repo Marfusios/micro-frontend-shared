@@ -9,6 +9,9 @@ import { AppVersionComponent } from './app-version/app-version.component';
 import { AppActionsComponent } from './app-actions/app-actions.component';
 import { AlertService, VersionService } from '../services';
 
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from '../store/counter.reducer';
+
 const formComponents = [
   AppLabelComponent,
   AppInputComponent,
@@ -31,6 +34,7 @@ const services = [
   ],
   imports: [
     CommonModule,
+    StoreModule.forFeature('counter', counterReducer)
   ],
   exports: [
     ...formComponents,
