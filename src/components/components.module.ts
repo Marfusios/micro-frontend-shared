@@ -9,6 +9,8 @@ import { AppVersionComponent } from './app-version/app-version.component';
 import { AppActionsComponent } from './app-actions/app-actions.component';
 import { AlertService, VersionService } from '../services';
 
+import { MatCardModule } from '@angular/material';
+
 const formComponents = [
   AppLabelComponent,
   AppInputComponent,
@@ -31,6 +33,7 @@ const services = [
   ],
   imports: [
     CommonModule,
+    MatCardModule,
   ],
   exports: [
     ...formComponents,
