@@ -14,10 +14,10 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^7.2.4",
-    "@angular/cdk": "^7.3.2",
-    "@angular/material": "^7.3.2",
-    "moment": "^2.24.0",
+    "@angular/animations": "7.2.4",
+    "@angular/cdk": "7.3.2",
+    "@angular/material": "7.3.2",
+    "moment": "2.24.0",
     "tachyons": "4.11.1"
   },
   "peerDependencies": {
