@@ -18,9 +18,8 @@ import { AppVersionComponent } from './app-version/app-version.component';
 import { AppEditorComponent } from './app-editor/app-editor.component';
 import { AppTextEditorComponent } from './app-text-editor/app-text-editor.component';
 
-// console.log(AgGridModule);
-
-const formComponents = [
+const components = [
+  AppDynamicComponent,
   AppLabelComponent,
   AppInputComponent,
   AppFieldComponent,
@@ -38,7 +37,7 @@ const services = [
 
 @NgModule({
   declarations: [
-    ...formComponents,
+    ...components,
   ],
   providers: [
     ...services,
@@ -53,7 +52,7 @@ const services = [
     MatCardModule,
   ],
   exports: [
-    ...formComponents,
+    ...components,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
