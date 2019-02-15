@@ -1,4 +1,3 @@
-import { AgGridModule } from 'ag-grid-angular';
 import { AceEditorModule } from 'ng2-ace-editor';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
@@ -7,7 +6,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatCardModule } from '@angular/material';
 import { StoreModule } from '@ngrx/store';
 
-import { AlertService, VersionService } from '../services';
+import { AlertService, VersionService, GlobalComponentService } from '../services';
 import { counterReducer } from '../store/counter.reducer';
 import { AppActionsComponent } from './app-actions/app-actions.component';
 import { AppFieldComponent } from './app-field/app-field.component';
@@ -17,6 +16,9 @@ import { AppTableComponent } from './app-table/app-table.component';
 import { AppVersionComponent } from './app-version/app-version.component';
 import { AppEditorComponent } from './app-editor/app-editor.component';
 import { AppTextEditorComponent } from './app-text-editor/app-text-editor.component';
+import { AppDynamicComponent } from './app-dynamic/app-dynamic.component';
+
+const AgGridModule = require('ag-grid-angular').AgGridModule;
 
 const components = [
   AppDynamicComponent,
@@ -33,6 +35,7 @@ const components = [
 const services = [
   AlertService,
   VersionService,
+  GlobalComponentService,
 ];
 
 @NgModule({

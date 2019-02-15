@@ -14,22 +14,3 @@ $candy-app-warn:    mat-palette($mat-red);
 $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
 
 @include angular-material-theme($candy-app-theme);
-
-$ag-icons-path: "~ag-grid-community/src/styles/ag-theme-balham/icons/";
-
-$icon-color: #03a9f4;
-$alt-icon-color: #03a9f4;
-$accent-color: #FFFFF1;
-
-$header-height: 50px;
-$row-height: 40px;
-$row-border-width: 1px;
-$hover-color: cornsilk;
-
-$ag-range-selected-color-1: rgb(250, 235, 215);
-$ag-range-selected-color-2: darken($ag-range-selected-color-1, 10%);
-$ag-range-selected-color-3: darken($ag-range-selected-color-1, 20%);
-$ag-range-selected-color-4: darken($ag-range-selected-color-1, 30%);
-
-@import "~ag-grid-community/src/styles/ag-grid";
-@import "~ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham";
